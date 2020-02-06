@@ -14,8 +14,9 @@ def diffBigIndex(lst):
     highest = 0
     i = 0
     while i < len(lst) - 1:
-        diff = lst[i] - lst[i - 1]
-        if highest < diff:
+        diff = lst[i] - lst[i + 1]
+
+        if highest < abs(diff):
             highest = diff
         i += 1
 
